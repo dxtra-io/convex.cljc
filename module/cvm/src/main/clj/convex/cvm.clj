@@ -34,7 +34,7 @@
 
   (:import (convex.core Block
                         State)
-           (convex.core.data ABlobMap
+           (convex.core.data AIndex
                              AccountKey
                              AccountStatus
                              ACell
@@ -45,8 +45,8 @@
            (convex.core.lang AFn
                              AOp
                              Context)
-           (convex.core.lang.impl AExceptional
-                                  ErrorValue)
+           (convex.core.lang.exception AExceptional
+                                       ErrorValue)
            (convex.core.transactions ATransaction))
   (:refer-clojure :exclude [compile
                             def
@@ -117,7 +117,7 @@
   
   (^Context [option+]
 
-   (Context/createFake (or (:convex.cvm/state option+)
+   (Context/create (or (:convex.cvm/state option+)
                            (Init/createState (or (:convex.cvm/genesis-key+ option+)
                                                  [$.cell/key-fake])))
                        (or (:convex.cvm/address option+)
@@ -386,7 +386,7 @@
   
    A vector cell of size 2 vectors containing a logging address and a logged value."
 
-  ^ABlobMap
+  ^AIndex
   
   [^Context ctx]
 

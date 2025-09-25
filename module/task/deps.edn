@@ -14,8 +14,8 @@
 ;; be checkout out in version control.
 ;;
 {:deps
- {babashka/fs {:mvn/version "0.1.11"},
-  cheshire/cheshire {:mvn/version "5.11.0"},
+ {babashka/fs #:mvn{:version "0.1.11"},
+  cheshire/cheshire #:mvn{:version "5.11.0"},
   protosens/maestro.idiom
   {:deps/root "module/maestro.idiom",
    :git/sha "2d41c8a",

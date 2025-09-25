@@ -19,7 +19,7 @@
            (convex.core.data AccountKey
                              Address
                              ABlob
-                             ABlobMap
+                             AIndex
                              ACell
                              ACountable
                              ADataStructure
@@ -322,7 +322,7 @@
 
   "Builds a blob map from key-values (keys must be blobs)."
 
-  ^ABlobMap
+  ^AIndex
 
   [& kvs]
 
@@ -1132,7 +1132,7 @@
 
   [x]
 
-  (instance? ABlobMap
+  (instance? AIndex
              x))
 
 

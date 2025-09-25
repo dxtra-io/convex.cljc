@@ -1,5 +1,7 @@
 (ns convex.test.cvm
 
+  "Testing `convex.cvm`."
+
   {:author "Adam Helinski"}
 
   (:require [clojure.test :as T]

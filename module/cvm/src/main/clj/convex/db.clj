@@ -42,7 +42,7 @@
                              Hash)
            (convex.core.store Stores)
            (java.io File)
-           (etch EtchStore))
+           (convex.etch EtchStore))
   (:refer-clojure :exclude [flush
                             read]))
 
@@ -227,7 +227,7 @@
 
   [^ACell cell]
 
-  (let [^Ref r (ACell/createPersisted (.getValue (.getRef cell)))]
+  (let [^Ref r (.storeTopRef current (Ref/get cell) Ref/PERSISTED nil)]
     (when (.cachedHash r)
       (.getValue r))))
 
@@ -264,7 +264,7 @@
 
   [^ACell cell]
 
-  (let [^Ref r (ACell/createPersisted (.getValue (.getRef cell)))
+  (let [^Ref r  (.storeTopRef current (Ref/get cell) Ref/PERSISTED nil)
              h (.cachedHash r)]
     (when h
       (.setRootHash (.getEtch (current))

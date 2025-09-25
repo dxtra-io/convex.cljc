@@ -2427,7 +2427,7 @@
 
 (defn .gen.blob-map
 
-  ^{:doc {:description ["Returns a generator for BlobMaps."
+  ^{:doc {:description ["Returns a generator for Index."
                         ""
                         "`generator-key` must be a generator for any kind of Blob."
                         "`generator-value` can be a generator for anything."
