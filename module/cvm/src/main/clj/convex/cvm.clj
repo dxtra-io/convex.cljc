@@ -32,22 +32,22 @@
 
   {:author "Adam Helinski"}
 
-  (:import (convex.core Block
-                        State)
+  (:import (convex.core.cpos Block)
+           (convex.core.cvm State
+                           AccountStatus
+                           Address)
            (convex.core.data AIndex
                              AccountKey
-                             AccountStatus
                              ACell
-                             Address
                              AHashMap)
            (convex.core.data.prim CVMLong)
            (convex.core.init Init)
-           (convex.core.lang AFn
-                             AOp
-                             Context)
-           (convex.core.lang.exception AExceptional
-                                       ErrorValue)
-           (convex.core.transactions ATransaction))
+           (convex.core.cvm AFn
+                           AOp
+                           Context)
+           (convex.core.cvm.exception AExceptional
+                                      ErrorValue)
+           (convex.core.cvm.transactions ATransaction))
   (:refer-clojure :exclude [compile
                             def
                             eval

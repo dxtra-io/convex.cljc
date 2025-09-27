@@ -15,9 +15,11 @@
 
   {:author "Adam Helinski"}
 
-  (:import (convex.core State)
+  (:import (convex.core.cvm State
+                           Address
+                           IFn
+                           Syntax)
            (convex.core.data AccountKey
-                             Address
                              ABlob
                              AIndex
                              ACell
@@ -36,8 +38,7 @@
                              Refs
                              Refs$RefTreeStats
                              SignedData
-                             Symbol
-                             Syntax)
+                             Symbol)
            (convex.core.data.prim AInteger
                                   ANumeric
                                   CVMBigInteger
@@ -45,9 +46,8 @@
                                   CVMChar
                                   CVMDouble
                                   CVMLong)
-           (convex.core.lang IFn
-                             RT)
-           (convex.core.transactions ATransaction))
+           (convex.core.lang RT)
+           (convex.core.cvm.transactions ATransaction))
   (:refer-clojure :exclude [+
                             -
                             *

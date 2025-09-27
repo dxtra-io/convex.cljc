@@ -7,7 +7,6 @@
   (:import (clojure.lang IDeref)
            (convex.core ErrorCodes)
            (convex.core.data AccountKey
-                             Address
                              ABlob
                              AIndex
                              ACell
@@ -22,24 +21,25 @@
                              Format
                              Hash
                              Keyword
-                             Keywords
                              Lists
                              MapEntry
                              Maps
                              Sets
                              Strings
                              Symbol
-                             Syntax
                              Vectors)
+           (convex.core.cvm Address
+                           Keywords
+                           Syntax)
            (convex.core.data.prim CVMBigInteger
                                   CVMBool
                                   CVMChar
                                   CVMDouble
                                   CVMLong)
            (convex.core.lang RT)
-           (convex.core.transactions Call
-                                     Invoke
-                                     Transfer)
+           (convex.core.cvm.transactions Call
+                                         Invoke
+                                         Transfer)
            (java.util Collection
                       List))
   (:refer-clojure :exclude [*
@@ -329,9 +329,9 @@
 
   ^Blob
 
-  [cell]
+  [^ACell cell]
 
-  (Format/encodedBlob cell))
+  (.getEncoding cell))
 
 
 
