@@ -9,8 +9,8 @@
   org.slf4j/slf4j-api
   {:exclusions [org.slf4j/slf4j-nop org.slf4j/slf4j-parent],
    :mvn/version "1.7.36"},
-  world.convex/convex-core {:mvn/version "0.8.2-SNAPSHOT"},
-  world.convex/convex-peer {:mvn/version "0.8.2-SNAPSHOT"},
+  io.dxtra/convex-core {:mvn/version "0.8.2-SNAPSHOT-production-19e1d56-build.8"},
+  io.dxtra/convex-peer {:mvn/version "0.8.2-SNAPSHOT-production-19e1d56-build.8"},
   world.convex/cvm
   {:local/root "../cvm"}},
  :paths ["src/main/clj"]}

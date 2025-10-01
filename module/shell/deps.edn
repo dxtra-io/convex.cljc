@@ -32,8 +32,8 @@
    :git/sha "2d41c8a",
    :git/tag "stable/2022-10-13",
    :git/url "https://github.com/protosens/monorepo.cljc"},
-  world.convex/convex-core {:mvn/version "0.7.15"},
-  world.convex/convex-peer {:mvn/version "0.7.15"},
+  io.dxtra/convex-core {:mvn/version "0.8.2-SNAPSHOT-production-19e1d56-build.8"},
+  io.dxtra/convex-peer {:mvn/version "0.8.2-SNAPSHOT-production-19e1d56-build.8"},
   world.convex/cvm
   {:deps/root "module/cvm",
    :git/sha "a35d0a80fecd085afbca1ffb82684142da8f2e77",
